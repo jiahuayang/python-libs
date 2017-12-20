@@ -15,7 +15,14 @@ if __name__ == "__main__":
     print(li)
     """
 
+    """test select sort
     li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
     print(li)
     select_sort(li)
+    print(li)
+    """
+
+    li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    print(li)
+    insert_sort(li)
     print(li)

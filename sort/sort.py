@@ -28,3 +28,15 @@ def select_sort(alist):
                 min_index = i
         alist[min_index], alist[j] = alist[j], alist[min_index]
 
+
+def insert_sort(alist):
+    """insert sort"""
+    n = len(alist)
+    for j in range(1, n):
+        i = j
+        while i > 0:
+            if alist[i] < alist[i-1]:
+                alist[i], alist[i-1] = alist[i-1], alist[i]
+                i -= 1
+            else:
+                break
