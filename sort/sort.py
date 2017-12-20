@@ -16,3 +16,15 @@ def bubble_sort(alist):
                 count += 1
         if 0 == count:
             return
+
+
+def select_sort(alist):
+    """select sort"""
+    n = len(alist)
+    for j in range(n-1):
+        min_index = j
+        for i in range(min_index+1, n):
+            if alist[min_index] > alist[i]:
+                min_index = i
+        alist[min_index], alist[j] = alist[j], alist[min_index]
+
