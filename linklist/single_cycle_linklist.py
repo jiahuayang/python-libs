@@ -5,6 +5,10 @@
 # @Project : dl-demo
 # @Copyright(c) 2017 By KaWa All rights reserved.
 
+"""""""""""
+A module to implement the single cycle link list
+"""""""""""
+
 # library
 # standard library
 
