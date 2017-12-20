@@ -1,2 +1,2 @@
 .idea/*
-linklist/__pycache__/*
+*.pyc
