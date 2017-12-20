@@ -40,3 +40,28 @@ def insert_sort(alist):
                 i -= 1
             else:
                 break
+
+
+def shell_sort(alist):
+    """shell sort"""
+    n = len(alist)
+    gap = n // 2
+    # i = gap
+    # for i in range(gap, n):
+    #     # i = [gap, gap+1, gap+2, gap+3... n-1]
+    #     while:
+    #     if alist[i] < alist[i-gap]:
+    #         alist[i], alist[i-gap] = alist[i-gap], alist[i]
+
+    while gap > 0:
+        for j in range(gap, n):
+            # j = [gap, gap+1, gap+2, gap+3, ..., n-1]
+            i = j
+            while i > 0:
+                if alist[i] < alist[i-gap]:
+                    alist[i], alist[i-gap] = alist[i-gap], alist[i]
+                    i -= gap
+                else:
+                    break
+        # reduce gap
+        gap //= 2
