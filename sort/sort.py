@@ -65,3 +65,31 @@ def shell_sort(alist):
                     break
         # reduce gap
         gap //= 2
+
+
+def quick_sort(alist, first, last):
+    """quick sort"""
+    if first >= last:
+        return
+    mid_value = alist[first]
+    low = first
+    high = last
+    while low < high:
+        # high shift left
+        while low < high and alist[high] >= mid_value:
+            high -= 1
+        alist[low] = alist[high]
+
+        # left shift right
+        while low < high and alist[low] < mid_value:
+            low += 1
+        alist[high] = alist[low]
+
+    # exit the while loop, high equal low,
+    # don't forget to put back the mid_value
+    alist[low] = mid_value
+
+    # left of the low
+    quick_sort(alist, first, low-1)
+    # right of the low
+    quick_sort(alist, low+1, last)
