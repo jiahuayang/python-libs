@@ -2,7 +2,7 @@
 # @Time    : 2017/12/20 下午4:32
 # @Author  : KaWa
 # @File    : double_linklist.py
-# @Project : dl-demo
+# @Project : python-libs
 # @Copyright(c) 2017 By KaWa All rights reserved.
 
 """""""""""

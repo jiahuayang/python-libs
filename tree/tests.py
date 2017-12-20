@@ -2,7 +2,7 @@
 # @Time    : 2017/12/20 下午10:29
 # @Author  : KaWa
 # @File    : tests.py
-# @Project : dl-demo
+# @Project : python-libs
 # @Copyright(c) 2017 By KaWa All rights reserved.
 
 from binary_tree import BinaryTree

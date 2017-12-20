@@ -2,7 +2,7 @@
 # @Time    : 2017/12/20 下午5:55
 # @Author  : KaWa
 # @File    : bubble_sort.py
-# @Project : dl-demo
+# @Project : python-libs
 # @Copyright(c) 2017 By KaWa All rights reserved.
 
 def bubble_sort(alist):
