@@ -36,7 +36,15 @@ if __name__ == "__main__":
     print(li)
     """
 
+    """test quick sort
     li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
     print(li)
     quick_sort(li, 0, len(li) - 1)
     print(li)
+    """
+
+    li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    print(li)
+    sorted_li = merge_sort(li)
+    print(li)
+    print(sorted_li)

@@ -93,3 +93,30 @@ def quick_sort(alist, first, last):
     quick_sort(alist, first, low-1)
     # right of the low
     quick_sort(alist, low+1, last)
+
+
+def merge_sort(alist):
+    """merge sort"""
+    n = len(alist)
+    if n <= 1:
+        return alist
+    mid = n//2
+
+    left_li = merge_sort(alist[:mid])
+    right_li = merge_sort(alist[mid:])
+
+    # merge(left, right)
+    left_pointer, right_pointer = 0, 0
+    result = []
+
+    while left_pointer < len(left_li) and right_pointer < len(right_li):
+        if left_li[left_pointer] <=  right_li[right_pointer]:
+            result.append(left_li[left_pointer])
+            left_pointer += 1
+        else:
+            result.append(right_li[right_pointer])
+            right_pointer += 1
+
+    result += left_li[left_pointer:]
+    result += right_li[right_pointer:]
+    return result
