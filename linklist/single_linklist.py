@@ -17,10 +17,10 @@ A module to implement the single link list
 
 
 class Node:
-    """the "node" contains item and next for the single link list
-       "item" is data, and "next" link to the next node"""
-    def __init__(self, item):
-        self.item = item
+    """the "node" contains elem and next for the single link list
+       "elem" is data, and "next" link to the next node"""
+    def __init__(self, elem):
+        self.elem = elem
         self.next = None
 
 
@@ -46,24 +46,24 @@ class SingleLinkList:
         return count
 
     def travel(self):
-        """travel the whole link and print the item"""
+        """travel the whole link and print the elem"""
         cur = self._head
 
         while cur != None:
-            print(cur.item, end=" ")
+            print(cur.elem, end=" ")
             cur = cur.next
 
         print()
 
-    def add(self, item):
+    def add(self, elem):
         """add the node at the link's head"""
-        node = Node(item)
+        node = Node(elem)
         node.next = self._head
         self._head = node
 
-    def append(self, item):
+    def append(self, elem):
         """add the node at the link's tail"""
-        node = Node(item)
+        node = Node(elem)
         if self.is_empty():
             self._head = node
         else:
@@ -72,15 +72,15 @@ class SingleLinkList:
                 cur = cur.next
             cur.next = node
 
-    def insert(self, pos, item):
+    def insert(self, pos, elem):
         """add the node at link's position, pos start with '0' """
         if pos <= 0:
             # add at the head
-            self.add(item)
+            self.add(elem)
 
         elif pos > (self.length()-1):
             # add at the tail
-            self.append(item)
+            self.append(elem)
             
         else:
             pre = self._head
@@ -88,16 +88,16 @@ class SingleLinkList:
             while count < (pos-1):
                 pre = pre.next
                 count += 1
-            node = Node(item)
+            node = Node(elem)
             node.next = pre.next
             pre.next = node
 
-    def remove(self, item):
-        """remove the link's node(item)"""
+    def remove(self, elem):
+        """remove the link's node(elem)"""
         cur = self._head
         pre = Node
         while cur != Node:
-            if cur.item == item:
+            if cur.elem == elem:
                 if cur == self._head:
                     self._head = cur.next
                 else:
@@ -107,11 +107,11 @@ class SingleLinkList:
                 pre = cur
                 cur = cur.next
 
-    def search(self, item):
-        """search the item at link, return true or false"""
+    def search(self, elem):
+        """search the elem at link, return true or false"""
         cur = self._head
         while cur != None:
-            if cur.item == item:
+            if cur.elem == elem:
                 return True
             else:
                 cur = cur.next
