@@ -17,6 +17,15 @@ def factorial(n):
     1! = 1
     2! = 2*1
     3! = 3*2*1 """
+
     return n if n<2 else n*factorial(n-1)
 
 
+def fibonacci(n):
+    """ fibonacci series, 'n' is natural number
+    fibonacci(0)=0
+    fibonacci(1)=1
+    fibonacci(2)=fibonacci(1)+fibonacci(0)=1
+    fibonacci(3)=fibonacci(2)+fibonacci(1)+fibonacci(0)=2"""
+
+    return n if n<2 else fibonacci(n-1) + fibonacci(n-2)
