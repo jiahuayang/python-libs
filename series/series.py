@@ -12,7 +12,11 @@
 
 
 def factorial(n):
-    """factorial series, 'n' is natural number"""
+    """ factorial series, 'n' is natural number
+    0! = 1
+    1! = 1
+    2! = 2*1
+    3! = 3*2*1 """
     return n if n<2 else n*factorial(n-1)
 
 
