@@ -15,9 +15,13 @@ if __name__ == "__main__":
     print(factorial(6))
     """
 
+    """test finbonacci
     print(fibonacci(0))
     print(fibonacci(1))
     print(fibonacci(2))
     print(fibonacci(3))
     print(fibonacci(4))
+    print(fibonacci(5))
+    """
+
     print(fibonacci(5))

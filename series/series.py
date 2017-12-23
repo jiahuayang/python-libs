@@ -9,7 +9,8 @@
 # standard library
 
 # third-party library
-
+import common
+from decorator.clock_decorator import clock
 
 def factorial(n):
     """ factorial series, 'n' is natural number
@@ -20,7 +21,7 @@ def factorial(n):
 
     return n if n<2 else n*factorial(n-1)
 
-
+@clock
 def fibonacci(n):
     """ fibonacci series, 'n' is natural number
     fibonacci(0)=0
