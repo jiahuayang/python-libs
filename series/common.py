@@ -5,6 +5,10 @@
 # @Project : python-libs
 # @Copyright(c) 2017 By KaWa All rights reserved.
 
+"""
+this script make subpackage import parent-package and other subpackage
+"""
+
 # library
 # standard library
 import os, sys, inspect
