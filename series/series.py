@@ -7,6 +7,7 @@
 
 # library
 # standard library
+import functools
 
 # third-party library
 import common
@@ -21,6 +22,7 @@ def factorial(n):
 
     return n if n<2 else n*factorial(n-1)
 
+@functools.lru_cache()
 @clock
 def fibonacci(n):
     """ fibonacci series, 'n' is natural number
